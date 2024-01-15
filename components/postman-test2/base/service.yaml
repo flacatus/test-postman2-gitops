@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: postman-test2
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: postman-test2 
+  name: postman-test2
+  namespace: test_fla1
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: postman-test2 
